@@ -14,7 +14,6 @@ connection.on('connection', (pool) => {
     if(!pool) throw new Error('Couldn\'t connect to the database.Please try again later')
 }) 
 
-//throw new to 
 export {
     connection
 }
