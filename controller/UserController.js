@@ -1,7 +1,7 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 import {users} from '../model/index.js'
-import { verifyAToken } from '../middleware/UserAuth.js'
+// import { verifyAToken } from '../middleware/UserAuth.js'
 
 
 const userRouter = express.Router()
@@ -21,12 +21,12 @@ userRouter.post('/register',  (req, res) => {
  })
 // verifyAToken
 
-userRouter.patch('/:id',(req, res) => {
+userRouter.patch('/update/:id',(req, res) => {
     users.updateUser(req, res)
 })
 
 // verifyAToken,
-userRouter.delete('/:id',  (req, res) => {
+userRouter.delete('/delete/:id',  (req, res) => {
     users.deleteUser(req, res)
 })
 

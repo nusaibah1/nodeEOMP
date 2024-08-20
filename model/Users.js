@@ -10,7 +10,7 @@ fetchUsers(req, res) {
             SELECT userID, firstName, lastName, userAge, Gender,userRole, emailAdd, userProfile
             FROM Users;`
             db.query(strQry, (err, results) => {
-                if(err)  throw new Error(`Unable to fetch all users`) 
+                if(err) throw new Error(`Unable to fetch all users`) 
                     res.json({
                 status: res.statusCode, results
                     })
