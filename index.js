@@ -1,19 +1,15 @@
 import { userRouter, express } from './controller/UserController.js'
-
+import { productRouter } from './controller/ProductsController.js'
 import path from 'path'
 
-// Express app
+//Express App
 const app = express()
 const port = +process.env.PORT || 4000
-const router = express.Router()
 
-// Middleware
-app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*");
-    next()
-})
-app.use('/user', userRouter)
 
+
+app.use('/users', userRouter)
+app.use('/products', productRouter)
 app.use(
     express.static('./static'),
     express.json(),
@@ -21,6 +17,11 @@ app.use(
      extended: true
     }))
 
+
+
+app.get('^/$|/petCo', (req, res) => {
+        res.status(200).sendFile(path.resolve('./static/html/index.html'))
+    })
 app.listen(port, () => {
     console.log(`Server is running on ${port}`);
 })
