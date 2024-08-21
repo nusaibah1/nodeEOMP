@@ -1,9 +1,9 @@
 <template>
     <div class="container">
-        <div class="row">
+    
             <h2 class="display-2">Products</h2>
-</div>
-<div class="row gap-2 justify-content-center my-2" v-if="products">
+
+<div  v-if="products">
             <Card v-for="product in products" :key="product.prodID">
                 <template #cardHeader>
                     {{ product.productURL }}
@@ -13,10 +13,10 @@
                     <h5 class="card-title fw-bold">{{ product.prodName }}</h5>
                     <p class="lead"><span class="text-success fw-bold">R{{ product.amount }}</span></p>
                     <div class="button-wrapper d-md-flex d-block justify-content-between">
-                        <router-link :to="{ name: 'product', params: { id: product.prodID } }">
-                            <button class="btn btn-success">View</button>
-                        </router-link>
-                        <button class="btn btn-dark">Cart</button>
+                        <!-- <router-link :to="{ name: 'product', params: { id: product.prodID } }"> -->
+                            <!-- <button class="btn btn-success">View</button>
+                        </router-link> -->
+                        <button class="btn">View</button>
                     </div>
                 </template>
             </Card>
@@ -43,10 +43,16 @@ onMounted(() => {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
-h2{
+h2,h5, p{
   font-family: "Modak", system-ui;
   font-weight: 400;
   font-style: normal;
+}
+
+
+.btn{
+    background-color: #80EF80 !important;
+    font-family: "Modak", system-ui;
 }
 </style>
 
