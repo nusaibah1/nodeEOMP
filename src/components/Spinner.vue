@@ -11,21 +11,28 @@ export default {
 </script>
 <style>
 .loader {
-  width: 60px;
-  aspect-ratio: 1;
-  background: linear-gradient(#dc1818 0 0) bottom/100% 0% no-repeat #ccc;
-  -webkit-mask:  
-    radial-gradient(circle at 60% 65%, #000 62%, #0000 65%) top left, 
-    radial-gradient(circle at 40% 65%, #000 62%, #0000 65%) top right, 
-    linear-gradient(to bottom left, #000 42%,#0000 43%) bottom left , 
-    linear-gradient(to bottom right,#000 42%,#0000 43%) bottom right;
-  -webkit-mask-size: 50% 50%;
-  -webkit-mask-repeat: no-repeat;
-  animation: l19 2s infinite linear;
-  align-items: center;
+  width: calc(6*30px);
+  height: 50px;
+  display: flex;
+  color: #8d7958;
+  filter: drop-shadow(30px 25px 0 currentColor) drop-shadow(60px 0 0 currentColor) drop-shadow(120px 0 0 currentColor);
+  clip-path: inset(0 100% 0 0);
+  animation: l12 2s infinite steps(7);
 }
-@keyframes l19 {
-    90%,100% {background-size:100% 100%}
+.loader:before {
+  content: "";
+  width: 30px;
+  height: 25px;
+  --c:no-repeat radial-gradient(farthest-side,currentColor 92%,#0000);
+  background: 
+    var(--c) left /70% 70%,
+    var(--c) right/20% 20%,
+    var(--c) top    0 right 15%/20% 20%,
+    var(--c) bottom 0 right 15%/20% 20%;
+}
+@keyframes l12 {
+  100% {clip-path: inset(0 -30px 0 0)}
 }
 </style>
 
+ 
