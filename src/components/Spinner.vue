@@ -22,6 +22,7 @@ export default {
   -webkit-mask-size: 50% 50%;
   -webkit-mask-repeat: no-repeat;
   animation: l19 2s infinite linear;
+  align-items: center;
 }
 @keyframes l19 {
     90%,100% {background-size:100% 100%}
