@@ -1,3 +1,4 @@
+
 <template>
     <div class="card">
         <div class="card-header">
@@ -10,13 +11,20 @@
 </template>
 
 <script>
+
 export default {
-    name: 'CardComp'
+  name: 'CardComp'
+    
+
 }
 </script>
 
-<style scoped>
-.card {
+<style>
+.card{
     width: 18rem;
 }
 </style>
+
+
+
+
