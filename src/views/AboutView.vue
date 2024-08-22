@@ -2,8 +2,8 @@
   <div>
     <div
       :style="{
-        backgroundImage: `url('https://github.com/nusaibah1/allImages/blob/main/images/Untitled_design__2_-removebg.png?raw=true')`,
-        backgroundSize: 'cover',
+        backgroundImage: `url('https://github.com/nusaibah1/allImages/blob/main/images/newback.png?raw=true')`,
+        backgroundSize: 'repeat',
       }"
     >
     <div class="circle">

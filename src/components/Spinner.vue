@@ -18,6 +18,8 @@ export default {
   filter: drop-shadow(30px 25px 0 currentColor) drop-shadow(60px 0 0 currentColor) drop-shadow(120px 0 0 currentColor);
   clip-path: inset(0 100% 0 0);
   animation: l12 2s infinite steps(7);
+  margin-top: 24%;
+  margin-left: 44%;
 }
 .loader:before {
   content: "";

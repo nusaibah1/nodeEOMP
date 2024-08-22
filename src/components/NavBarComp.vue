@@ -39,7 +39,7 @@ export default {
     name: 'NavBarComp',
 };
 </script>
-<style>
+<style scoped>
 .nav-link{
     color: #ae7b56;
     font-weight:600;
@@ -58,6 +58,9 @@ export default {
 }
 .nav-link:hover{
   color:#adb095;
+}
+.nav-link:active{
+  color: #ae7b56;
 }
     
 </style>
