@@ -19,9 +19,9 @@
                   <li class="nav-item">
                     <router-link class="nav-link" to="/admin">Admin</router-link>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <router-link class="nav-link" to="/itemView">Item View</router-link>
-                  </li>
+                  </li> -->
                   <li class="nav-item">
                     <router-link class="nav-link" to="/contact">Contact</router-link>
                   </li>
@@ -48,6 +48,9 @@ export default {
 .logo{
     /* padding-bottom: 60px; */
     align-content: center;
+}
+.nav-item{
+  padding-right: 20px;
 }
     
 </style>
