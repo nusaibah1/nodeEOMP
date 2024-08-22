@@ -4,7 +4,7 @@
           <header id="nav-colour" class="d-flex justify-content-between">
             <div style="width: 100%; height: 130px; background-color: #E9EDC9"
               class="d-flex justify-content-between">
-              <a class="nav bar-brand justify-content-start" href="#"> <img class="logo" src="https://github.com/nusaibah1/projectImages/blob/main/images2/petCo-removebg-preview2.png?raw=true" alt="logo" width="150"
+              <a class="nav bar-brand justify-content-start" href="#"> <img class="logo" src="https://github.com/nusaibah1/allImages/blob/main/images/petCo-removebg-preview.png?raw=true" alt="logo" width="150"
                   height="150"></a>
                 <ul class=" nav nav-underline justify-content-end">
                   <li class="nav-item">
@@ -41,7 +41,7 @@ export default {
 </script>
 <style>
 .nav-link{
-    color: #000000;
+    color: #ae7b56;
     font-weight:600;
 }
 
@@ -50,7 +50,14 @@ export default {
     align-content: center;
 }
 .nav-item{
-  padding-right: 20px;
+  padding-right: 25px;
+  font-family: "Concert One", sans-serif;
+  margin-top: 5%;
+  font-size: 23px;
+
+}
+.nav-link:hover{
+  color:#adb095;
 }
     
 </style>

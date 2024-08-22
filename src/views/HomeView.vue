@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="rectangle">
-      <img class="dog" src="https://github.com/nusaibah1/projectImages/blob/main/images2/pets2-removebg-preview.png?raw=true" alt="dogs" width="420"
+      <img class="dog" src="https://github.com/nusaibah1/allImages/blob/main/images/pets2-removebg-preview.png?raw=true" alt="dogs" width="420"
       height="420">
       <div class="blob">
       <p class="heading">Pet Co</p>
@@ -45,7 +45,7 @@ export default {
 }
 
 .heading{
-  font-family: Spicy Rice;
+  font-family: "Bungee", sans-serif;
   font: 40px;
   font-weight: 800;
   font-size: 40px;
@@ -58,7 +58,7 @@ export default {
 }
 
 .heading2{
-  font-family: Spicy Rice;
+  font-family: "Concert One", sans-serif;
   font: 50px;
   font-weight: 600;
   font-size: 23px;
@@ -72,7 +72,7 @@ export default {
 }
 
 .heading3{
-  font-family: Spicy Rice;
+  font-family: "Concert One", sans-serif;
   font: 45px;
   font-weight: 560;
   font-size: 13px;
@@ -82,6 +82,7 @@ export default {
   left: 50%; 
   transform: translate(-50%, -50%); 
   padding-top: 15px;
+  color:#ae7b56;
 }
 
 .btn{
