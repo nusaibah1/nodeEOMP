@@ -3,7 +3,7 @@
     
             <h2 class="display-2">Products</h2>
 
-<div  v-if="products">
+<div  v-if="products" products>
             <Card v-for="product in products" :key="product.prodID">
                 <template #cardHeader>
                     {{ product.productURL }}
