@@ -123,7 +123,7 @@ deleteUser(req, res) {
          ` 
        
          db.query(strQry, (err) => {
-           if(err) throw new Error('Unable to delete user.To delete the user, please review your delete query.')
+           if(err) throw new Error('Unable to delete user.')
                res.json({
            status: res.statusCode,
            msg: 'A user\'s information was removed.'
@@ -154,7 +154,7 @@ async login(req, res) {
                       {
                   
                       status: 401, 
-                      msg: 'You provided the wrong email.'
+                      msg: 'Invalid email address. Please ensure that you provide the correct email address.'
                   }
               )
                } else {
