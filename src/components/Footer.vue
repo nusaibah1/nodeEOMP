@@ -2,7 +2,7 @@
     <footer class="container-fluid">
         <div class="row">
             <footer class="lead">PetCo &copy; <span class="shadow">
-                {{ cYear }} 
+                {{ currYear }} 
                 </span>
          </footer>
         </div>
@@ -16,7 +16,7 @@ export default {
 name: 'FooterComp',
 data() {
     return{
-        cYear: new Date().getUTCFullYear()
+        currYear: new Date().getUTCFullYear()
     }
 },
 
