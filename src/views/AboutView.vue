@@ -2,14 +2,14 @@
   <div>
     <div
       :style="{
-        backgroundImage: `url('https://github.com/nusaibah1/projectImages/blob/main/images2/Untitled_design__2_-removebg.png?raw=true')`,
+        backgroundImage: `url('https://github.com/nusaibah1/allImages/blob/main/images/Untitled_design__2_-removebg.png?raw=true')`,
         backgroundSize: 'cover',
       }"
     >
     <div class="circle">
       <img
         class="img2"
-        src="https://github.com/nusaibah1/projectImages/blob/main/images2/29295293-removebg-preview.png?raw=true"
+        src="https://github.com/nusaibah1/allImages/blob/main/images/29295293-removebg-preview.png?raw=true"
         alt="dogs2"
         width="370px"
         height="350px"
@@ -67,14 +67,14 @@
         <div class="container">
           <a href="https://capespca.co.za/donate/" target="blank">
             <img class="img2"
-              src="https://github.com/nusaibah1/projectImages/blob/main/images2/spca-removebg-preview.png?raw=true"
+              src="https://github.com/nusaibah1/allImages/blob/main/images/spca-removebg-preview.png?raw=true"
               width="100px"
               height="100px"
           /></a>
 
           <a href="https://dogstrust.co.za/" target="blank"
             ><img class="img2"
-              src="https://github.com/nusaibah1/projectImages/blob/main/images2/DogsTrustLogo-removebg-preview.png?raw=true"
+              src="https://github.com/nusaibah1/allImages/blob/main/images/DogsTrustLogo-removebg-preview.png?raw=true"
               width="100px"
               height="100px"
           /></a>
@@ -84,7 +84,7 @@
             target="blank"
           >
             <img class="img2"
-              src="https://github.com/nusaibah1/projectImages/blob/main/images2/4paws-removebg-preview.png?raw=true"
+              src="https://github.com/nusaibah1/allImages/blob/main/images/4paws-removebg-preview.png?raw=true"
               width="100px"
               height="100px"
           /></a>
@@ -123,10 +123,11 @@ export default {
 }
 
 .about {
-  font-family: Spicy Rice;
+  font-family: "Bungee", sans-serif;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
+  margin-top: 2%;
 }
 
 .rectangle3 {
@@ -142,8 +143,8 @@ export default {
   height: 210px;
   text-align: center;
   color: black;
-  font-size: 17px;
-  font-family: Myanmar Khyay;
+  font-size: 16px;
+  font-family: "Concert One", sans-serif;
   font-weight: 300;
   word-wrap: break-word;
   margin-top: 5%;
@@ -159,7 +160,7 @@ export default {
   padding: 2%; /* Add padding if needed for spacing */
 }
 .mission {
-  font-family: Spicy Rice;
+  font-family: "Bungee", sans-serif;
   font-weight: 800;
   font-size: 55px;
   text-align: center;
@@ -169,7 +170,7 @@ export default {
   width: 100%;
   color: black;
   font-size: 19px;
-  font-family: spicy rice;
+  font-family: "Concert One", sans-serif;
   font-weight: 400;
   margin-top: 2%;
   margin-left: 2%;
@@ -188,14 +189,14 @@ export default {
   margin-right: 5%;
 } */
 .mission2 {
-  font-family: Spicy Rice;
+  font-family: "Bungee", sans-serif;
   font-weight: 800;
   font-size: 55px;
   text-align: center;
   margin-top: 2%; /* Adjusted margin */
 }
 .begin {
-  font-family: Spicy Rice;
+  font-family: "Bungee", sans-serif;
   font-weight: bold;
   color: #adb095;
 }

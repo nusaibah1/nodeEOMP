@@ -1,7 +1,7 @@
 <template>
   <div class="body">
     <div :style="{
-        backgroundImage: `url('https://github.com/nusaibah1/projectImages/blob/main/images2/Untitled_design__2_-removebg.png?raw=true')`,
+        backgroundImage: `url('https://github.com/nusaibah1/allImages/blob/main/images/Untitled_design__2_-removebg.png?raw=true')`,
         backgroundSize: 'cover',
       }"
     ></div>
@@ -9,7 +9,7 @@
       <div class="container">
         <div class="row">
             
-            <div class="col-lg-6">
+            <div class="col-lg-6 hehe">
                 <form class="form" action="https://submit-form.com/p43cP2sz9" style="max-width: 400px; margin-left: 10%; margin-top: 5%;" >
       <label for="name" style="display: block; margin-bottom: 8px; font-weight: bold">Name</label>
 
@@ -28,14 +28,24 @@
 <div class="col-lg-6">
                 <img class="doggy" src="https://github.com/nusaibah1/projectImages/blob/main/images2/images-removebg-preview.png?raw=true">
                 <br><br><br><br><br><br><br>
-   <img class="logos" src="https://github.com/nusaibah1/projectImages/blob/main/images2/face%201.png?raw=true" alt="facebook" width="20px" height="20px"  > 
-   <img class="logos" src="https://github.com/nusaibah1/projectImages/blob/main/images2/insta%201.png?raw=true" alt="instagram" width="20px" height="20px">
-   <img class="logos" src="https://github.com/nusaibah1/projectImages/blob/main/images2/twitter%201.png?raw=true" alt="twitter" width="20px" height="20px">
+
+                <div class="social-media">
+                    <p class="social-link">
+                        <img class="logos" src="https://github.com/nusaibah1/projectImages/blob/main/images2/face%201.png?raw=true" alt="facebook" width="20px" height="20px" />
+                        <span class="name">@PetCo_</span>
+                    </p>
+                    <p class="social-link">
+                        <img class="logos" src="https://github.com/nusaibah1/projectImages/blob/main/images2/insta%201.png?raw=true" alt="instagram" width="20px" height="20px" />
+                        <span class="name">@PetCO_Cpt</span>
+                    </p>
+                    <p class="social-link">
+                        <img class="logos" src="https://github.com/nusaibah1/projectImages/blob/main/images2/twitter%201.png?raw=true" alt="twitter" width="20px" height="20px" />
+                        <span class="name">@_PetCo</span>
+                    </p>
+                </div>
             </div>
         </div>
       </div>
-      <!-- hehe -->
-  
   </div>
 </template>
 <script>
@@ -46,7 +56,7 @@ export default {};
         background-color: black;
     } */
 .about9 {
-  font-family: Spicy Rice;
+  font-family: "Bungee", sans-serif;
   font-size: 40px;
   font-weight: bold;
   text-align: center;
@@ -64,4 +74,25 @@ label, input, textarea {
 /* .logos{
     margin-bottom: 100%;
 } */
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.social-link {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+.social-link span {
+    margin-left: 5px;
+}
+.name{
+  font-weight: bold;
+  font-family: "Bungee", sans-serif;
+}
+.hehe{
+  height: 68vh;
+}
 </style>

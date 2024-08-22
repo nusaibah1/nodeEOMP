@@ -18,6 +18,8 @@ export default {
     #footerC{
         color: black;
         background-color:#E9EDC9;
-        height: 30px;
+        height: 35px;
+        font-family: "Bungee", sans-serif;
+        
     }
 </style>
