@@ -18,8 +18,6 @@ app.use((req, res, next) => {
     res.header("Access-Control-Expose-Headers", "Authorization")
     next()
   })
-app.use('/users', userRouter)
-app.use('/products', productRouter)
 app.use(
   express.static("./static"),
   express.json(),
