@@ -25,7 +25,7 @@ class Products {
             SELECT prodID, prodName, Category,prodDescription, prodURL, amount
             FROM Products
             ORDER BY productID DESC
-            LIMIT 5;`
+            LIMIT 3;`
             db.query(strQry, (err, results) => {
                 if (err) throw new Error('Unable to retrieve recent products')
                 res.json({

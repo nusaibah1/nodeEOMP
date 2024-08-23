@@ -10,6 +10,7 @@ fetchUsers(req, res) {
             SELECT userID, firstName, lastName, userAge, Gender,userRole, emailAdd, userProfile
             FROM Users;`
             db.query(strQry, (err, results) => {
+                
                 if(err) throw new Error(`Unable to fetch all users`) 
                     res.json({
                 status: res.statusCode, results
@@ -39,7 +40,7 @@ fetchUser(req, res) {
             if (!result.length) {
                 res.json({
                     status: 404,
-                    msg: 'Incorrect ID provided. Please ensure that the correct ID is provided proceed.'
+                    msg: 'Incorrect ID provided. Please ensure that the correct ID is provided to proceed.'
                 })
             } else { 
                 res.json({
@@ -55,6 +56,7 @@ fetchUser(req, res) {
         })
     }
 }
+// When registering a new user the tester should make sure that an email address and password is provided or the registration will be invalid 
 async registerUser(req, res) {
     try {
         let data = req.body
@@ -101,8 +103,8 @@ async registerUser(req, res) {
         WHERE userID = ${req.params.id};  
         `
         db.query(strQry, [data], (err) => {
-            //'Unable to update user'
-            if(err) throw new Error(err)
+            //
+            if(err) throw new Error('Unable to update user')
             res.json({
             status: res.statusCode,
                 msg: 'The user record was updated'

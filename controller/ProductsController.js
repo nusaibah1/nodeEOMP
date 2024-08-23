@@ -16,7 +16,7 @@ products.fetchProducts(req, res)
 })
 
 // Recent Products
-productRouter.get('/recent', (req, res) => {
+productRouter.get('/new', (req, res) => {
     products.recentProducts(req, res)
 })
 

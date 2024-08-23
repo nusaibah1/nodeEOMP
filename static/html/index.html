@@ -4,10 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/x-icon" href=" https://nusaibah1.github.io/allImages/images/Logo.png">
     <title>Petco</title>
 </head>
 <body>
-    <h1>Welcome to PetCo...though we're also known as Petropolis!</h1>
-    <h3>Your one-stop online shop where tails wag, scales shimmer, and every critter's wish comes true with just a click!</h3>
+    <h1>Welcome to PetCo</h1>
+
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>HTTP Method</th>
+                    <th>Path</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GET</td>
+                    <td>/</td>
+                    <td>Displays the static home page.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h3>Users</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>HTTP Methods</th>
+                    <th>Path</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GET</td>
+                    <td>/users</td>
+                    <td>Retrieves all users from the database</td>
+                </tr>
+                <tr>
+                    <td>GET</td>
+                    <td>/users/:id</td>
+                    <td>Retrieves a single user from the database</td>
+                </tr>
+                <tr>
+                    <td>POST</td>
+                    <td>/users/register</td>
+                    <td>Adds a single user to the database</td>
+                </tr>
+                <tr>
+                    <td>PATCH/PUT</td>
+                    <td>/users/update/:id</td>
+                    <td>Updates a single user</td>
+                </tr>
+                <tr>
+                    <td>DELETE</td>
+                    <td>/users/delete/:id</td>
+                    <td>Deletes a single user from the database</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Products/items</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>HTTP Method</th>
+                    <th>Path</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>GET</td>
+                    <td>/products</td>
+                    <td>Retrieves all products from the database</td>
+                </tr>
+                <tr>
+                    <td>GET</td>
+                    <td>/products/:id</td>
+                    <td>Retrieves a single product from the database</td>
+                </tr>
+                <tr>
+                    <td>POST</td>
+                    <td>/products/addProduct</td>
+                    <td>Adds a single product to the database</td>
+                </tr>
+                <tr>
+                    <td>PUT/PATCH</td>
+                    <td>/products/update/:id</td>
+                    <td>Updates a single product record</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
 </body>
 </html>
+
