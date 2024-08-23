@@ -23,8 +23,7 @@ app.use(
   express.json(),
   express.urlencoded({
     extended: true
-    }),
-    cors()
+    })
 )
 app.use('/users', userRouter)
 app.use('/products', productRouter)
