@@ -1,4 +1,3 @@
-
 import { createStore } from 'vuex'
 import axios from 'axios'
 import { toast } from 'vue3-toastify'
@@ -39,7 +38,7 @@ export default createStore({
       state.product = value
     },
 
-  },
+  }, 
   actions: {
     // ==== Fetch All Users ========
     async fetchUsers(context) {
@@ -83,12 +82,13 @@ export default createStore({
       try {
         const { msg, err, token } = await (await axios.post(`${apiURL}users/register`, payload)).data
         if (token) {
+          cookies.set('LegitUser', { token: token, expires: 7 });
           context.dispatch('fetchUsers')
           toast.success(`${msg}`, {
             autoClose: 3000
         
           })
-          router.push({ name: 'login' })
+        
         } else {
           toast.error(`${err}`, {
             autoClose: 3000
@@ -176,6 +176,8 @@ export default createStore({
     },
            // ==== Fetch A Product ========
     async fetchProduct(context, id) {
+      console.log(id);
+      
       try {
         const { result, msg } = await (await axios.get(`${apiURL}products/${id}`)).data
         if (result) {
@@ -213,9 +215,7 @@ export default createStore({
            // ==== Update a Product ========
     async updateProduct(context, prodID, payload) {
       try {
-        const response = await axios.patch(`${apiURL}products/update/${prodID}`, payload)
-        console.log(prodID, payload)
-        const  { msg } = response.data
+        const { msg } = await (await axios.patch(`${apiURL}products/update/${payload.productID}`, payload)).data
         if (msg) {
           context.dispatch('fetchProducts')
           toast.success(`${msg}`, {

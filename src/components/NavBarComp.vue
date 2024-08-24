@@ -19,9 +19,6 @@
                   <li class="nav-item">
                     <router-link class="nav-link" to="/admin">Admin</router-link>
                   </li>
-                  <!-- <li class="nav-item">
-                    <router-link class="nav-link" to="/itemView">Item View</router-link>
-                  </li> -->
                   <li class="nav-item">
                     <router-link class="nav-link" to="/contact">Contact</router-link>
                   </li>
@@ -61,6 +58,23 @@ export default {
 }
 .nav-link:active{
   color: #ae7b56;
+}
+@media only screen and (max-width: 300px) {
+  .nav {
+    flex-direction: column;
+  }
+  .nav-item {
+    padding-right: 0;
+    margin-top: 10px;
+  }
+  .nav-link {
+    font-size: 13px;
+    align-content: space-between;
+  }
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
 }
     
 </style>

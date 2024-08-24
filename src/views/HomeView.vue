@@ -9,7 +9,11 @@
       <p class="heading2">Pet Store</p>
       <br><br>
       <p class="heading3"> Number 1 trusted Pet Store</p>
-      <button class="btn">Shop now</button>
+
+      <router-link to="/products" class="button-link" style="display: block;">
+        <button class="btn">Shop now</button>
+      </router-link> 
+      
       </div>
     </div>
   </div>
@@ -97,7 +101,7 @@ export default {
   transform: translate(-50%, -50%); 
   font-size: small;
   font-weight: bold;
-  
+  z-index: 2;
 
 }
 
@@ -143,5 +147,40 @@ export default {
     border-color:#E9EDC9;
   }
 }
+  
+  @media (max-width: 300px) {
+    .rectangle {
+    width: 100%;
+    height: 100vh;
+    margin-top: 10%;
+  }
+  .dog {
+    width: 46%;
+    height: 30%;
+   margin-top: 30%;
+  }
+  .blob {
+    width: 50%;
+    height: 20%;
+    margin-top: 40%;
+  }
+  .heading {
+    font-size: 20px;
+    margin-top: 0%;
+  }
+  .heading2 {
+    font-size: 16px;
+    margin-top: 0%;
+  }
+  .heading3 {
+    font-size: 8px;
+    margin-top: 10%;
+  }
+  .btn {
+    width: 100px;
+    height: 30px;
+    margin-top: 50%;
+  }
+  }
 
 </style>
