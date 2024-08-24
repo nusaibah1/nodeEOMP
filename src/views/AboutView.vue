@@ -1,11 +1,7 @@
 <template>
   <div>
-    <div
-      :style="{
-        backgroundImage: `url('https://github.com/nusaibah1/allImages/blob/main/images/newback.png?raw=true')`,
-        backgroundSize: 'repeat',
-      }"
-    >
+    <div>   
+   
     <div class="circle">
       <img
         class="img2"
@@ -151,20 +147,20 @@ export default {
 }
 .rectangle2 {
   display: flex;
-  flex-direction: column; /* Stack paragraphs vertically */
+  flex-direction: column; 
   width: 80rem;
-  height: auto; /* Adjust height to fit content */
+  height: auto; 
   background-color: #fefae0;
   margin-top: 11%;
   margin-left: 8%;
-  padding: 2%; /* Add padding if needed for spacing */
+  padding: 2%; 
 }
 .mission {
   font-family: "Bungee", sans-serif;
   font-weight: 800;
   font-size: 55px;
   text-align: center;
-  margin-top: 2%; /* Adjusted margin */
+  margin-top: 2%;
 }
 .about4, .about5 {
   width: 100%;
@@ -193,7 +189,7 @@ export default {
   font-weight: 800;
   font-size: 55px;
   text-align: center;
-  margin-top: 2%; /* Adjusted margin */
+  margin-top: 2%;
 }
 .begin {
   font-family: "Bungee", sans-serif;
@@ -206,5 +202,68 @@ export default {
 
 .img2 {
   margin: 3rem;
+}
+
+@media (max-width: 300px) {
+  .circle {
+    width: 140px;
+    height: 140px;
+    margin-top: 50%;
+    margin-left: 2%;
+  }
+  .img2 {
+    width: 100px;
+    height: 100px;
+    margin-top: 10%;
+  }
+  .head {
+    width: 10px;
+    height: 25px;
+    margin-top: -180px;
+    margin-right: 5%;
+  }
+  .about {
+    font-size: 16px;
+    margin-top: 60%;
+  }
+  .rectangle3 {
+    width: 250px;
+    height: 120px;
+    margin-top: 13%;
+    /* margin-right: 0%; */
+    /* margin-left: 100%; */
+  }
+  .about2 {
+    font-size: 13px;
+    margin-top: 0%;
+  }
+  .rectangle2 {
+    width: 250px;
+    height: auto;
+    margin-top: 60%;
+    margin-left: 20%;
+    padding: 10px;
+  }
+  .mission {
+    font-size: 30px;
+  }
+  .about4, .about5 {
+    font-size: 15px;
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .mission2 {
+    font-size: 25px;
+  }
+  .begin {
+    font-size: 18px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .img2 {
+    margin: 10px;
+  }
 }
 </style>

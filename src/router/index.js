@@ -4,6 +4,7 @@ import AboutView from '../views/AboutView.vue'
 import ContactView from '../views/ContactView.vue'
 import ProductsView from '@/views/ProductsView.vue'
 import AdminView from '@/views/AdminView.vue'
+import itemView from '@/views/itemView.vue'
 
 
 const routes = [
@@ -32,6 +33,21 @@ const routes = [
     name: 'admin',
     component: AdminView
   },
+  // {
+  //   path: '/product/:id',
+  //   name: 'product',
+  //   component: ProductsView
+  // },
+  {
+    path: '/items/:id',
+    name: 'item',
+    component: itemView
+  },
+  // {
+  //   path: '/item',
+  //   name: 'item',
+  //   component: itemView
+  // },
   
   {
     path: '/about',
@@ -47,5 +63,6 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes
 })
+
 
 export default router
