@@ -81,26 +81,26 @@ SELECT prodID, prodName, Category,prodDescription, prodURL, amount
             })
         }
     }
-    updateProduct(req, res) {
-        try {
-            const strQry = `
+updateProduct(req, res) {
+    try {
+        const strQry = `
 UPDATE Products
 SET ? 
-WHERE prodID = ${req.params.id};`
-            db.query(strQry, [req.body], (err) => {
-                if (err) throw new Error('Unable to update product')
-                res.json({
-                    status: res.statusCode,
-                    msg: 'Product was successfully updated'
-                })
-            })
-        } catch (e) {
+WHERE prodID = ?;`
+        db.query(strQry, [req.body, req.params.id], (err) => { 
+            if (err) throw new Error('Unable to update the product. Please try again later.');
             res.json({
-                status: 404,
-                err: e.message
-            })
-        }
+                status: res.statusCode,
+                msg: 'Product was successfully updated'
+            });
+        });
+    } catch (e) {
+        res.status(404).json({
+            err: e.message
+        });
     }
+}
+
     deleteProduct(req, res) {
         try {
             const strQry = `
