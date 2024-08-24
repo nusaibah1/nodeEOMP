@@ -105,7 +105,7 @@ export default createStore({
         // ==== Update a User ========
     async updateUser(context, payload) {
       try {
-        const { msg, err } = await (await axios.patch(`${apiURL}users/${payload.userID}`, payload)).data
+        const { msg, err } = await (await axios.patch(`${apiURL}users/update/${payload.userID}`, payload)).data
         if (msg) {
           context.dispatch('fetchUsers')
         } else {
@@ -124,7 +124,7 @@ export default createStore({
         // ==== Remove a User ========
     async deleteUser(context, id) {
       try {
-        const { msg, err } = await (await axios.delete(`${apiURL}users/${id}`)).data
+        const { msg, err } = await (await axios.delete(`${apiURL}users/delete/${id}`)).data
         if (msg) {
           context.dispatch('fetchUsers')
         } else {
@@ -157,10 +157,10 @@ export default createStore({
       }
 
     },
-        // ==== Fetch Recent Products ========
+        // ==== Fetch 3 Latests Products ========
     async recentProducts(context) {
       try {
-        const { results, msg } = await (await axios.get(`${apiURL}products/recent`)).data
+        const { results, msg } = await (await axios.get(`${apiURL}products/new`)).data
         if (results) {
           context.commit('setRecentProducts', results)
         } else {
@@ -196,7 +196,7 @@ export default createStore({
            // ==== Add a Product========
     async addAProduct(context, payload) {
       try {
-        const { msg } = await (await axios.post(`${apiURL}products/add`, payload)).data
+        const { msg } = await (await axios.post(`${apiURL}products/addProduct`, payload)).data
         if (msg) {
           context.dispatch('fetchProducts')
           toast.success(`${msg}`, {
@@ -211,9 +211,11 @@ export default createStore({
       }
     },
            // ==== Update a Product ========
-    async updateProduct(context, payload) {
+    async updateProduct(context, prodID, payload) {
       try {
-        const { msg } = await (await axios.patch(`${apiURL}products/${payload.productID}`, payload)).data
+        const response = await axios.patch(`${apiURL}products/update/${prodID}`, payload)
+        console.log(prodID, payload)
+        const  { msg } = response.data
         if (msg) {
           context.dispatch('fetchProducts')
           toast.success(`${msg}`, {
@@ -231,7 +233,7 @@ export default createStore({
            // ==== Remove a  Product ========
     async deleteProduct(context, id) {
       try {
-        const { msg } = await (await axios.delete(`${apiURL}products/${id}`)).data
+        const { msg } = await (await axios.delete(`${apiURL}products/delete/${id}`)).data
         if (msg) {
           context.dispatch('fetchProducts')
           toast.success(`${msg}`, {
